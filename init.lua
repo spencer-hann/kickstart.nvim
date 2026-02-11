@@ -396,6 +396,11 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          layout_strategy = 'horizontal',
+          -- preview pane wider than default because hard to read on laptop
+          layout_config = { preview_width = 0.6 },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
