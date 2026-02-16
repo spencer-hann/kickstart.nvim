@@ -224,9 +224,13 @@ rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 require('lazy').setup({
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, opts = {
-    auto_integrations = true,
-  } },
+  -- 'aikhe/fleur.nvim',  -- TODO: https://github.com/aikhe/fleur.nvim
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    opts = { auto_integrations = true },
+  },
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
