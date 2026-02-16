@@ -327,6 +327,7 @@ require('lazy').setup({
       spec = {
         { '<leader>l', group = '[L]SP' }, -- custom/not part of kickstart
         { '<leader>j', group = '[J]ump list' }, -- custom/not part of kickstart
+        { '<leader>g', group = '[G]it' }, -- custom/not part of kickstart
         { '<leader>s', group = '[S]earch' },
         -- { '<leader>t', group = '[T]oggle' },  -- moved inside LSP tree
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
