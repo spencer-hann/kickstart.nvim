@@ -214,6 +214,8 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+vim.lsp.enable 'basedpyright'
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -681,6 +683,7 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},  -- TODO:
+        basedpyright = {}, -- TODO:
         rust_analyzer = {
           -- https://sharksforarms.dev/posts/neovim-rust/
           checkOnSave = { command = 'clippy' },
