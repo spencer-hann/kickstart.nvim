@@ -71,16 +71,6 @@ If you experience any errors while trying to install kickstart, run `:checkhealt
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
-function FileExists(name)
-  local f = io.open(name, 'r')
-  if f == nil then
-    return false
-  else
-    io.close(f)
-    return true
-  end
-end
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -952,9 +942,7 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    -- treesitter can't keep its file names straight
-    -- on some systems '.configs' on others '.config'... sigh
-    main = FileExists 'nvim-treesitter.configs' and 'nvim-treesitter.configs' or 'nvim-treesitter.config', -- Sets main module to use for opts
+    main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
