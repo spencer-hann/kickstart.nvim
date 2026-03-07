@@ -18,6 +18,8 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['<2-LeftMouse>'] = 'open_tabnew',
+          ['l'] = 'focus_preview',
         },
       },
     },
