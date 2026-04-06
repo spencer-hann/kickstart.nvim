@@ -71,6 +71,8 @@ If you experience any errors while trying to install kickstart, run `:checkhealt
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+vim.o.winborder = 'rounded'
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
